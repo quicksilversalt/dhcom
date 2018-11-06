@@ -1,1 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/37f830");
+
+  
+@font-face {font-family: 'KapraNeuePro-Medium';src: url('assets/webfonts/37F830_0_0.eot');src: url('assets/webfonts/37F830_0_0.eot?#iefix') format('embedded-opentype'),url('assets/webfonts/37F830_0_0.woff2') format('woff2'),url('assets/webfonts/37F830_0_0.woff') format('woff'),url('assets/webfonts/37F830_0_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'KapraNeuePro-MediumIt';src: url('assets/webfonts/37F830_1_0.eot');src: url('assets/webfonts/37F830_1_0.eot?#iefix') format('embedded-opentype'),url('assets/webfonts/37F830_1_0.woff2') format('woff2'),url('assets/webfonts/37F830_1_0.woff') format('woff'),url('assets/webfonts/37F830_1_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'KapraNeuePro-SemiBoldExp';src: url('assets/webfonts/37F830_2_0.eot');src: url('assets/webfonts/37F830_2_0.eot?#iefix') format('embedded-opentype'),url('assets/webfonts/37F830_2_0.woff2') format('woff2'),url('assets/webfonts/37F830_2_0.woff') format('woff'),url('assets/webfonts/37F830_2_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'KapraNeuePro-SemiBoldExpRd';src: url('assets/webfonts/37F830_3_0.eot');src: url('assets/webfonts/37F830_3_0.eot?#iefix') format('embedded-opentype'),url('assets/webfonts/37F830_3_0.woff2') format('woff2'),url('assets/webfonts/37F830_3_0.woff') format('woff'),url('assets/webfonts/37F830_3_0.ttf') format('truetype');}
+ 
+
+.KapraNeuePro-Medium { 
+	font-family: KapraNeuePro-Medium;
+	font-weight: normal;
+	font-style: normal;
+}
+.KapraNeuePro-MediumIt { 
+	font-family: KapraNeuePro-MediumIt;
+	font-weight: normal;
+	font-style: normal;
+}
+.KapraNeuePro-SemiBoldExp { 
+	font-family: KapraNeuePro-SemiBoldExp;
+	font-weight: normal;
+	font-style: normal;
+}
+.KapraNeuePro-SemiBoldExpRd { 
+	font-family: KapraNeuePro-SemiBoldExpRd;
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+    font-family: KapraNeuePro-Medium;
+	font-weight: normal;
+	font-style: normal;
+}

@@ -42,3 +42,9 @@ body {
 	font-weight: normal;
 	font-style: normal;
 }
+
+h1, h2, h3, h4 {
+    font-family: KapraNeuePro-Medium;
+	font-weight: normal;
+	font-style: normal;
+}

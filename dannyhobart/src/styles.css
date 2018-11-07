@@ -40,11 +40,20 @@
 body {
     font-family: KapraNeuePro-Medium;
 	font-weight: normal;
-	font-style: normal;
+    font-style: normal;
+    color: #4B424E;
 }
 
 h1, h2, h3, h4 {
     font-family: KapraNeuePro-Medium;
 	font-weight: normal;
 	font-style: normal;
+}
+
+/* global but specific */
+
+.big-title {
+    color: #4B424E;
+    font-size: 128px;
+    line-height: 60px;
 }

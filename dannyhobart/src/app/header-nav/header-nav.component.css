@@ -1,4 +1,13 @@
 .header-buttons .btn {
     font-size: 24px;
-    
+    color: #4B424E;
+    height: 45px;
+    text-align: left;
+    width: 150px;
+    letter-spacing: 0px;
+    padding: 6px 0.5rem;
+    border-radius: 0;
+    margin-left: 6px;
+    background-color: white;
 }
+

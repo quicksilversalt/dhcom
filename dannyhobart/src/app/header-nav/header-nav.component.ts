@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-header-nav',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderNavComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  onMouseOver(data: Event) {
+    // console.log(data);
+    // console.log(data.target.style);
+    
+  }
+
+  handleClick(id: string) {
+    console.log(id);
+    this.router.navigate([id]);
   }
 
 }

@@ -20,6 +20,9 @@ export class HeaderNavComponent implements OnInit {
   }
 
   handleClick(id: string) {
+    if(id === 'home') {
+      id = '';
+    }
     console.log(id);
     this.router.navigate([id]);
   }

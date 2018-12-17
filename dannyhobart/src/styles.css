@@ -48,7 +48,9 @@ body {
 h1, h2, h3, h4 {
     font-family: KapraNeuePro-Medium;
 	font-weight: normal;
-	font-style: normal;
+    font-style: normal;
+    text-transform: uppercase;
+    color: #4B424E;
 }
 
 /* global but specific */
@@ -57,4 +59,15 @@ h1, h2, h3, h4 {
     color: #4B424E;
     font-size: 128px;
     line-height: 60px;
+}
+
+.showcase-item {
+    /* width: 100%;
+    max-width: 1200px; */
+    
+}
+
+.btn:focus {
+    outline-width: 1px;
+    outline-color: #4B424E;
 }

@@ -1,3 +1,34 @@
-<p>
-  static-art works!
-</p>
+<div class="clr-row">
+  <div class="col-sm-8 offset-sm-2">
+    <div class="showcase-nav mx-auto">
+      <div 
+        *ngFor="let item of paintingList" 
+        class="showcase-nav-element"
+        (click)="onSelected($event, item)"
+        [style.backgroundImage]="'url('+ item.thumbnailPath +')'"
+        >
+    </div>
+    </div>
+  </div>
+  <div class="col-sm-8 offset-sm-2">
+
+  </div>
+  <div class="showcase-item col-sm-8 offset-sm-2">
+    <div class="showcase-image col-sm-12">
+          <img
+            [src]="currentPainting.imagePath"
+            alt="{{ currentPainting.title }}"
+            class="img-responsive">
+    </div>
+    <div class="col-sm-12 showcase-label">
+      <h4 class="painting-title">
+        <span>{{ currentPainting.title }}</span>
+        <span class="KapraNeuePro-MediumIt showcase-date-dimensions">{{ currentPainting.yr }}</span>
+        <span class="showcase-date-dimensions">{{ currentPainting.dimensions }}</span>
+      </h4>
+      <p class="showcase-description">{{ currentPainting.desc }}</p>
+    </div>
+  </div>
+</div>
+
+

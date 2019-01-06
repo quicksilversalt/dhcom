@@ -2,31 +2,38 @@
   <div 
     class="big-title KapraNeuePro-SemiBoldExp col-sm-12"
     (click)="handleClick('home')">DANNYHOBART</div>
-  <div class="header-buttons col-sm-12">
-    <button 
-      class="btn btn-link KapraNeuePro-SemiBoldExp" 
-      (mouseover)="onMouseOver($event)"
-      (click)="handleClick('static-art')"
-      >Static</button>
-    <button 
-      class="btn btn-link KapraNeuePro-SemiBoldExp" 
-      (mouseover)="onMouseOver($event)"
-      (click)="handleClick('motion-art')"
-      >motion</button>
-    <button 
-      class="btn btn-link KapraNeuePro-SemiBoldExp" 
-      (mouseover)="onMouseOver($event)"
-      (click)="handleClick('online-art')"
-      >online</button>
-    <button 
-      class="btn btn-link KapraNeuePro-SemiBoldExp" 
-      (mouseover)="onMouseOver($event)"
-      (click)="handleClick('writing')"
-      >writing</button>
-    <button 
-      class="btn btn-link KapraNeuePro-SemiBoldExp" 
-      (mouseover)="onMouseOver($event)"
-      (click)="handleClick('exhibitions')"
-      >exhibitions</button>
+  <div class="angle-button"
+      (click)="mobileMenuToggle()">
+      <i class="fas fa-angle-down"></i>
   </div>
+  <div class="header-buttons col-sm-12" *ngIf="this.showMenu">
+    <div class="prime-nav">
+      <button 
+        class="btn btn-link KapraNeuePro-SemiBoldExp static-art" 
+        (mouseover)="onMouseOver($event)"
+        (click)="handleClick('static-art')"
+        >Static</button>
+      <button 
+        class="btn btn-link KapraNeuePro-SemiBoldExp motion-art" 
+        (mouseover)="onMouseOver($event)"
+        (click)="handleClick('motion-art')"
+        >motion</button>
+      <button 
+        class="btn btn-link KapraNeuePro-SemiBoldExp online-art" 
+        (mouseover)="onMouseOver($event)"
+        (click)="handleClick('online-art')"
+        >online</button>
+      <button 
+        class="btn btn-link KapraNeuePro-SemiBoldExp writing" 
+        (mouseover)="onMouseOver($event)"
+        (click)="handleClick('writing')"
+        >writing</button>
+      <button 
+        class="btn btn-link KapraNeuePro-SemiBoldExp exhibitions" 
+        (mouseover)="onMouseOver($event)"
+        (click)="handleClick('exhibitions')"
+        >exhibitions</button>
+    </div>
+  </div>
+  
 </div>

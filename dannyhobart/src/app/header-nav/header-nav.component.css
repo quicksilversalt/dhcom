@@ -11,3 +11,48 @@
     background-color: white;
 }
 
+.angle-button {
+    display: none;
+}
+
+@media screen and (max-width: 780px) {
+    .angle-button {
+        display: block;
+        width: 100%;
+        height: 50px;
+        font-size: 50px;
+        padding-top: 10px;
+    }
+    .big-title {
+        font-size: 100px;
+        line-height: 55px;
+    }
+    .prime-nav { 
+        display: flex; 
+        flex-flow: column;
+        align-items: center; }
+    .static-art { order: 1; }
+    .motion-art { order: 2;  }
+    .online-art { order: 3; }
+    .writing { order: 4; }
+    .exhibitions { order: 5 }
+
+    .header-buttons .btn {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .big-title {
+        font-size: 85px;
+        line-height: 48px;
+    }
+}
+
+@media screen and (max-width: 515px) {
+    .big-title {
+        font-size: 65px;
+        line-height: 35px;
+    }
+}

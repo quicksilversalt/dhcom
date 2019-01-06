@@ -1,19 +1,16 @@
 <div class="clr-row">
-  <div class="col-sm-8 offset-sm-2">
-    <div class="showcase-nav mx-auto">
+  <div class="col-sm-1 offset-sm-1">
+    <div class="showcase-nav">
       <div 
         *ngFor="let item of paintingList" 
-        class="showcase-nav-element"
+        class="showcase-nav-element mx-auto"
         (click)="onSelected($event, item)"
         [style.backgroundImage]="'url('+ item.thumbnailPath +')'"
         >
     </div>
     </div>
   </div>
-  <div class="col-sm-8 offset-sm-2">
-
-  </div>
-  <div class="showcase-item col-sm-8 offset-sm-2">
+  <div class="showcase-item col-sm-8">
     <div class="showcase-image col-sm-12">
           <img
             [src]="currentPainting.imagePath"

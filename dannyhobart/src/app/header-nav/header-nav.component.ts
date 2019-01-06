@@ -1,5 +1,6 @@
 import { Component, OnInit, HostListener } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-header-nav',
@@ -7,11 +8,39 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./header-nav.component.css']
 })
 export class HeaderNavComponent implements OnInit {
-  public mobile = false;
+  public mobile: boolean = false;
   public showMenu: boolean = true;
   public innerWidth: any;
+  public currentURLState: string;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {
+    router.events.subscribe(event => {
+      if (event instanceof NavigationEnd ) {
+        console.log("current url",event.url); // event.url has current url
+        // TODO: there has to be a better way to do this
+        switch (event.url){
+          case "/" :
+            this.currentURLState = "home";
+          break;
+          case "/static-art":
+            this.currentURLState = "static";
+          break;
+          case "/motion-art":
+            this.currentURLState = "motion";
+          break;
+          case "/online-art":
+            this.currentURLState = "online";
+          break;
+          case "/writing":
+            this.currentURLState = "writing";
+          break;
+          case "/exhibitions":
+            this.currentURLState = "exhibitions";
+          break;
+        }
+      }
+    });
+  }
 
   @HostListener('window:resize', ['$event'])
   onResize(event){

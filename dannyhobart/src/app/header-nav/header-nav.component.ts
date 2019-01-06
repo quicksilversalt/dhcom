@@ -73,6 +73,9 @@ export class HeaderNavComponent implements OnInit {
     if(id === 'home') {
       id = '';
     }
+    if(this.mobile) {
+      this.showMenu = false;
+    }
     console.log(id);
     this.router.navigate([id]);
   }

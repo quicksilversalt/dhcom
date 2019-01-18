@@ -10,6 +10,10 @@
     margin-left: 6px;
     background-color: white;
 }
+.header-buttons .btn.no-content {
+    color: #B0ADB1;
+    background-color: #F5F4F4;
+}
 .header-buttons .btn.active {
     color: #ffffff;
     background-color: #E57750;

@@ -11,6 +11,7 @@ import { Paintings } from 'src/app/shared/paintings.model';
 export class StaticArtComponent implements OnInit {
   paintingList: Paintings[];
   currentPainting: Paintings;
+  currentNavItem: number;
 
   constructor( private paintingsService:PaintingsService ) { }
 
@@ -23,7 +24,8 @@ export class StaticArtComponent implements OnInit {
     });
     
     this.currentPainting = result[0];
-    console.log(this.currentPainting);
+    this.currentNavItem = 0;
+    //console.log(this.currentPainting);
   }
 
   showCurrentImage(id:number){
@@ -31,7 +33,7 @@ export class StaticArtComponent implements OnInit {
       return +obj.id === id
     });
     this.currentPainting = result[0];
-    console.log(this.currentPainting);
+    this.currentNavItem = id - 1;//id is non zero'd
   }
 
   onSelected(e:Event, p:Paintings){

@@ -16,7 +16,6 @@ export class HeaderNavComponent implements OnInit {
   constructor(private router: Router) {
     router.events.subscribe(event => {
       if (event instanceof NavigationEnd ) {
-        console.log("current url",event.url); // event.url has current url
         // TODO: there has to be a better way to do this
         switch (event.url){
           case "/" :
@@ -76,7 +75,10 @@ export class HeaderNavComponent implements OnInit {
     if(this.mobile) {
       this.showMenu = false;
     }
-    console.log(id);
+    if (id === 'motion-art' || id === 'online-art' || id === 'writing') {
+      return;
+    }
+    //console.log(id);
     this.router.navigate([id]);
   }
 

@@ -8,6 +8,7 @@ export class Paintings {
     public desc: string;
     public yr: string;
     public linkTo: string;
+    public categoryName: string;
 
   constructor(
       id: string, 
@@ -18,7 +19,8 @@ export class Paintings {
       thumbnailPath: string,
       desc: string, 
       yr: string,
-      linkTo: string) {
+      linkTo: string,
+      categoryName: string) {
     this.id = id;
     this.status = status;
     this.title = title;
@@ -28,5 +30,6 @@ export class Paintings {
     this.desc = desc;
     this.yr = yr;
     this.linkTo = linkTo;
+    this.categoryName = categoryName;
   }
 }

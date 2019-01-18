@@ -6,40 +6,44 @@ export class PaintingsService {
     private paintings: Paintings[] = [
         new Paintings("1",
                       "cur",
-                      "some title",
+                      "untitled (water pipes)",
                       "24 x 36 inches",
                       environment.assetURL + "assets/img/ptg/bongs_hiRes.jpg",
                       environment.assetURL + "assets/img/ptg/bongs_hiRes.jpg",
-                      "this is the description",
+                      "Oil on Linen.  Private Collection.",
                       "2008",
-                      ""),
+                      "",
+                      "If I Should Die Before I Wake"),
         new Paintings("2",
                       "",
-                      "some title",
+                      "champagne and chocolate",
                       "24 x 36 inches",
                       environment.assetURL + "assets/img/ptg/champagne_hi.jpg",
                       environment.assetURL + "assets/img/ptg/champagne_hi.jpg",
-                      "this is the description",
+                      "Oil on Linen.  Collection of the artist.",
                       "2008",
-                      ""),
+                      "",
+                      "If I Should Die Before I Wake"),
         new Paintings("3",
                       "",
-                      "some title",
+                      "untitled (ruger)",
                       "24 x 36 inches",
                       environment.assetURL + "assets/img/ptg/ruger.jpg",
                       environment.assetURL + "assets/img/ptg/ruger.jpg",
-                      "this is the description",
+                      "Oil on Panel.  Private Collection",
                       "2008",
-                      ""),
+                      "",
+                      "If I Should Die Before I Wake"),
         new Paintings("4",
                       "",
-                      "some title",
+                      "wilhelmina",
                       "24 x 36 inches",
                       environment.assetURL + "assets/img/ptg/wilhelmina.jpg",
                       environment.assetURL + "assets/img/ptg/wilhelmina.jpg",
-                      "this is the description",
+                      "Oil on Linen.  Collection of the artist.",
                       "2008",
-                      ""),
+                      "",
+                      "If I Should Die Before I Wake"),
     ];
 
     getPaintingById(id:number) {
@@ -47,7 +51,6 @@ export class PaintingsService {
     }
 
     getAllPaintings() {
-        console.log('get all paintings called');
         return this.paintings.slice();
     }
 

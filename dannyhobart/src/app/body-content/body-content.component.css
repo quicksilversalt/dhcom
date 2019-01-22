@@ -4,3 +4,10 @@
     color: #878787;
     padding-top: 80px;
 }
+
+@media screen and (max-width: 780px) {
+    .manifesto-body{
+        padding: 0 15px;
+    }
+    
+}

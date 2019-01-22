@@ -1,8 +1,13 @@
 .img-responsive {
-    /* display:block;
-    width:100%; */
-    max-width:100%;
+    max-width:90%;
+    max-height: 650px;
     border-radius: 7px;
+}
+.next-back-nav.left {
+    padding-right: 0.5rem;
+}
+.next-back-nav.right {
+    padding-left: 0.5rem;
 }
 .showcase-label {
     text-align: left;
@@ -47,6 +52,12 @@
     height: 50px;
     background-color: #EFEEEE;
     margin-top: 15px;
+}
+
+@media screen and (max-width: 780px) {
+    .next-back-nav {
+        display: none;
+    }
 }
 
 

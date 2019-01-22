@@ -20,7 +20,7 @@ export class StaticArtComponent implements OnInit {
     //console.log(this.paintingList);
 
     let result = this.paintingList.filter(obj => {
-      return +obj.id === 1
+      return +obj.id === 0
     });
     
     this.currentPainting = result[0];
@@ -29,15 +29,37 @@ export class StaticArtComponent implements OnInit {
   }
 
   showCurrentImage(id:number){
+    //console.log('trying to show ' + id);
     let result = this.paintingList.filter(obj => {
       return +obj.id === id
     });
     this.currentPainting = result[0];
-    this.currentNavItem = id - 1;//id is non zero'd
+    this.currentNavItem = id;
   }
 
-  onSelected(e:Event, p:Paintings){
+  onSelected(e:Event, p:Paintings, indx:number){
+    console.log(p.id);
+    console.log('index is ' + indx);
     this.showCurrentImage(+p.id);
+  }
+
+  handleBackClick(){
+    //console.log('curnavitem is ' + this.currentNavItem);
+    const newIndex = this.currentNavItem - 1;
+    if(newIndex < 0){
+      this.showCurrentImage(this.paintingList.length - 1);
+    } else {
+      this.showCurrentImage(newIndex);
+    }
+  }
+  handleNextClick(){
+    const newIndex = this.currentNavItem + 1;
+    if(newIndex >= this.paintingList.length) {
+      //console.log('too long ');
+      this.showCurrentImage(0);
+    } else {
+      this.showCurrentImage(newIndex);
+    }
   }
 
 }

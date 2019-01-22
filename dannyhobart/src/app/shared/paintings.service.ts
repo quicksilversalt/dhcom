@@ -4,7 +4,7 @@ import { environment } from './../../environments/environment';
 export class PaintingsService {
 
     private paintings: Paintings[] = [
-        new Paintings("1",
+        new Paintings("0",
                       "cur",
                       "untitled (water pipes)",
                       "24 x 36 inches",
@@ -14,7 +14,7 @@ export class PaintingsService {
                       "2008",
                       "",
                       "If I Should Die Before I Wake"),
-        new Paintings("2",
+        new Paintings("1",
                       "",
                       "champagne and chocolate",
                       "24 x 36 inches",
@@ -24,7 +24,7 @@ export class PaintingsService {
                       "2008",
                       "",
                       "If I Should Die Before I Wake"),
-        new Paintings("3",
+        new Paintings("2",
                       "",
                       "untitled (ruger)",
                       "24 x 36 inches",
@@ -34,7 +34,7 @@ export class PaintingsService {
                       "2008",
                       "",
                       "If I Should Die Before I Wake"),
-        new Paintings("4",
+        new Paintings("3",
                       "",
                       "wilhelmina",
                       "24 x 36 inches",

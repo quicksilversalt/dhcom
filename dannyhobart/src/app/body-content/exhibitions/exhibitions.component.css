@@ -6,10 +6,15 @@
     color: #B0ADB1;
 }
 
-.bio-info {
+.show-title {
     font-family: KapraNeuePro-SemiBoldExpRd;
 	font-weight: normal;
     font-style: normal;
-    
+}
+
+.bio-info {
+    font-family: KapraNeuePro-LightExpRd;
+    font-weight: normal;
+    font-style: normal;
     color: #717171;
 }

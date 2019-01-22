@@ -4,10 +4,18 @@
   </div>
   <div class="showcase-item col-sm-8">
     <div class="showcase-image col-sm-12">
+      <i 
+      class="next-back-nav left fas fa-caret-left fa-2x"
+      (click)="handleBackClick()"></i>
           <img
             [src]="currentPainting.imagePath"
             alt="{{ currentPainting.title }}"
+            (swipeleft)="handleBackClick()"
+            (swiperight)="handleNextClick()"
             class="img-responsive">
+      <i 
+      class="next-back-nav right fas fa-caret-right fa-2x "
+      (click)="handleNextClick()"></i>
     </div>
     <div class="col-sm-12 showcase-label">
       <h4 class="painting-title">
@@ -24,7 +32,7 @@
         *ngFor="let item of paintingList; let index = index" [class.active]="index === 0"
         class="showcase-nav-element"
         [ngClass]="{'active': currentNavItem===index}"
-        (click)="onSelected($event, item)"
+        (click)="onSelected($event, item, index)"
         [style.backgroundImage]="'url('+ item.thumbnailPath +')'"
         >
     </div>
